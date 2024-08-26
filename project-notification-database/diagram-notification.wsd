@@ -1,0 +1,48 @@
+@startuml   notification
+
+' hide the spot
+' hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+
+entity "user" as e01{
+    * id : VARCHAR(100) <<PK>>
+    --
+    * name : VARCHAR(100)
+}
+
+entity "notifications" as e02{
+    * id : INT AUTO_INCREMENT <<PK>>
+    --
+    * title : VARCHAR(250)
+    * description : TEXT
+    * create_at : TIMESTAMP
+    --
+    user_id : VARCHAR(100) <<FK>>
+    category_id : VARCHAR(100) <<FK>>
+}
+
+entity "category" as e03{
+    * id : VARCHAR(100) <<PK>>
+    --
+    * name : VARCHAR(100)
+}
+
+entity "notification_read" as e04{
+    * id : INT AUTO_INCREMENT <<PK>>
+    --
+    * is_read : BOOLEAN
+    * notifications_id : INT <<FK>>
+    * user_id : VARCHAR(100) <<FK>>
+}
+
+e01 ||--o{ e02
+e01 ||--o{ e04
+
+e02 ||--o{ e04
+
+e03 ||--o{ e02
+
+@enduml

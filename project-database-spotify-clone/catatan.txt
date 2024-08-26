@@ -1,0 +1,33 @@
+# RANGKUMAN & CATATAN MEMBUAT DATABASE SPOTIFY CLONE
+
+# Mendaftar entity terlebih dahulu
+    1. Artist;
+    2. Album;
+    3. Song;
+    4. Category;
+    5. Playlist;
+    6. Podcast;
+    7. Episode;
+    8. User;
+    9. Concert.
+
+# Menentukan masing-masing isi dari entity
+
+    # Isi dari entity Artist
+        a. id                   -- Id dari Artist
+        b. name                 -- nama dari Artist
+        c. instagram
+        d. facebook
+        e. twitter
+        f. wikipedia
+        g. keterangan bio
+
+    # Isi dari entity Album
+        a. id
+        b. title
+        c. release
+        d. image 
+
+
+
+-- AKHIR CATATAN
