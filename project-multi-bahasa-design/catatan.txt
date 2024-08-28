@@ -1,0 +1,11 @@
+multi bahasa database design
+
+studi kasus :
+membuat kategori dari suatu produk yang dapat diubah menjadi macam bahasa
+
+Tabel entitas
+    1. Category (e01);
+    2. CategoryTranslation (e02).
+
+Relasi
+    Category -One to Many-> CategoryTranslation

@@ -1,0 +1,17 @@
+@startuml multi bahasa
+entity "Category" as e01 {
+    * id : VARCHAR(100)
+    --
+    * position : INT
+}
+
+entity "CategoryTranslation" as e02 {
+    * category_id : VARCHAR(100) <<FK>> <<PK>>
+    * language : VARCHAR(100) <<PK>>
+    --
+    * name : VARCHAR(100)
+    * description : TEXT
+}
+
+e01 ||--o{ e02
+@enduml
